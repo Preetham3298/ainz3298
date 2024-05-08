@@ -1,0 +1,9 @@
+name: Hello World
+on:
+  workflow_dispatch:
+  push:
+jobs:
+  Hello-World-Job:
+    runs-on: codebuild-rim_get_k8s_resources-${{ github.run_id }}-${{ github.run_attempt }}
+    steps:
+      - run: echo "Hello World!"
